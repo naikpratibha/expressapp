@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/display.css">
+    <title></title>
+</head>
+<body>
+    <h1 class="title">Express App</h1>
+    <form class="form" method="POST">
+        <button type = "submit" class="no_auth" formaction="/noauth">No Auth</button>
+        <button type = "submit" class="basic_auth" formaction="/basicauth">Basic Auth</button>
+        <button type = "submit" class="api_key" formaction="/apikey">API Key</button>
+        <button type = "submit" class="bearer_token" formaction="/bearertoken">Bearer Token</button>
+    </form>
+    <div class="data_display">
+    <% if (locals.data) { %>
+        <h3 class="d_display">Response Data:</h3>
+        <pre class="d_display"><%= JSON.stringify(data, null, 2) %></pre>
+    <% } %>
+    </div>
+</body>
+</html>
