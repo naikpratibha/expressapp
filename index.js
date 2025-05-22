@@ -9,10 +9,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
-const username = "Pratibha Naik";
-const password = "IAmTheBest";
-const apiKey = "0ff8fb92-094e-4105-b35c-8267004455fa";
-const token = "8dba80ec-7b42-4a99-a9db-430a24829f54";
+const username = "";
+const password = "";
+const apiKey = "";
+const token = "";
 const credential = `${username}:${password}`;
 const authHeader = 'Basic '+Buffer.from(credential).toString('base64');
 const bearerkey = `Bearer ${token}`
